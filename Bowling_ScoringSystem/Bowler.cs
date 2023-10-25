@@ -9,7 +9,11 @@
         {
             this.Name = name;
         }
-    }
 
-    
+        public void PlayFrame()
+        {
+            var frame = new Frame();
+
+        }
+    }  
 }

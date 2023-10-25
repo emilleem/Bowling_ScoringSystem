@@ -8,7 +8,7 @@ namespace Bowling_ScoringSystem
         {
             Console.WriteLine("How many people are playing? ");
             int bowlerCount = int.Parse(Console.ReadLine());    
-            Game currentGame = InOut.StartGame(bowlerCount);
+            Game currentGame = InOut.PrepForGame(bowlerCount);
         }
     }
 

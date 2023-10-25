@@ -4,7 +4,7 @@ namespace Bowling_ScoringSystem
 {
     public class InOut
     {
-        public static Game StartGame(int bowlerCount)
+        public static Game PrepForGame(int bowlerCount)
         {
             Game newGame = new Game();
 

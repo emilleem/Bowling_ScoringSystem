@@ -19,6 +19,19 @@ namespace Bowling_ScoringSystem
         { 
             this._bowlers.Add(bowler);
         }
+
+        public void PlayGame()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                foreach (var bowler in this._bowlers)
+                {
+                    bowler.PlayFrame();
+                }
+            }
+        }
+
+        
     }
 
     

@@ -9,6 +9,10 @@
             get { return this.FirstThrow + this.SecondThrow; }
         }
 
+        public Frame()
+        {
+        }
+
         public Frame(int firstThrow, int secondThrow)
         {
             FirstThrow = firstThrow;
