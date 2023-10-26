@@ -1,0 +1,41 @@
+BOWLING RULES:
+
+1. Each game consists of 10 frames.
+2. In each frame the player has two rolls to knock down 10 pins.
+3. The score for the frame is the total number of pins knocked down, plus bonuses for strikes and spares.
+4. A spare is when the player knocks down all 10 pins in two rolls. The bonus for that frame is the number of pins knocked down by the next roll.
+5. A strike is when the player knocks down all 10 pins on his first roll. The frame is then completed with a single roll. The bonus for that frame is the value of the next two rolls.
+6. In the tenth frame, a player who rolls a spare or a strike is allowed to roll the extra balls to complete the frame. However no more than three balls can be rolled in the tenth frame.
+
+REQUIREMENTS:
+Write a class Game that has two methods
+
+void roll(int) is called each time the player rolls a ball. The argument is the number of pins knocked down.
+int score() returns the total score for that game.
+
+Create a BowlingGame Class:
+
+This class represents the entire bowling game. It should have attributes and methods to track the game's progress and calculate the score.
+Create a Frame Class:
+
+This class represents a single frame of the bowling game. Each frame can be in one of several states: open frame, spare, strike, or the 10th frame with special rules.
+Create a Player Class (Optional):
+
+ARCHITECTURE:
+
+If your program handles multiple players, you can create a Player class to manage the state of each player.
+BowlingGame Class Attributes and Methods:
+
+Frames: Maintain a list or array of Frame objects to represent the game's progression.
+CurrentFrame: Track the current frame being played.
+Roll(pinsKnockedDown): Method to record the number of pins knocked down in a roll for the current frame.
+CalculateScore(): Method to calculate the total score of the game.
+IsGameOver(): Method to check if the game is over.
+GetGameState(): Method to provide the state of the game after each frame.
+Frame Class Attributes and Methods:
+
+Rolls: Maintain a list of rolls (usually 2 rolls for most frames and 3 for the 10th frame).
+IsStrike(): Method to determine if the frame is a strike.
+IsSpare(): Method to determine if the frame is a spare.
+IsComplete(): Method to check if the frame is complete (no more rolls allowed).
+CalculateFrameScore(): Method to calculate the score for the current frame.

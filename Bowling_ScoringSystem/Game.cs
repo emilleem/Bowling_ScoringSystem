@@ -4,31 +4,38 @@ namespace Bowling_ScoringSystem
 {
     public class Game
     {
-        private List<Bowler> _bowlers = new List<Bowler>();
-
+        private Frame[] _Frames;
         public Game()
         {
+            this._Frames = new Frame[10];
         }
-
-        public Game(List<Bowler> bowlers)
+        public bool IsOver
         {
-            this._bowlers.AddRange(bowlers);
-        }
-
-        public void Add(Bowler bowler) 
-        { 
-            this._bowlers.Add(bowler);
-        }
-
-        public void PlayGame()
-        {
-            for (int i = 0; i < 10; i++)
+            get
             {
-                foreach (var bowler in this._bowlers)
-                {
-                    bowler.PlayFrame();
-                }
+                if (this._Frames[9].IsComplete())
+                    return true;
+                return false;
             }
+        }
+
+
+        public void Roll(int pinsKnockedDown)
+        {
+            if (this.IsOver)
+                return;
+        }
+
+        public int CalculateScore()
+        {
+            return 350;
+        }
+
+        
+        
+        public void GetGameState()
+        {
+
         }
 
         
